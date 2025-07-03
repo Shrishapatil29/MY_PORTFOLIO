@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shrisha S. Patil - Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+      color: #ffffff;
+    }
+
+    header {
+      background: #b514a5;
+      text-align: center;
+      padding: 20px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 28px;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      margin: 0 10px;
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 50px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .hero img {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      border: 3px solid #fff;
+      margin-bottom: 20px;
+    }
+
+    .hero h2 {
+      margin: 10px 0;
+      font-size: 26px;
+    }
+
+    .social-icons a {
+      margin: 0 8px;
+      color: #ffffff;
+      font-size: 22px;
+    }
+
+    .about {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .about-left {
+      flex: 1;
+      min-width: 260px;
+    }
+
+    .about-right {
+      flex: 1;
+      min-width: 260px;
+      background: rgba(255, 255, 255, 0.05);
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .highlight-pink {
+      color: #ff66b2;
+    }
+
+    .highlight-blue {
+      color: #00ffd5;
+    }
+
+    .btn {
+      display: inline-block;
+      margin: 15px 10px 0 0;
+      padding: 10px 20px;
+      border-radius: 25px;
+      font-weight: bold;
+      font-size: 15px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .btn.outline {
+      border: 2px solid #ff66b2;
+      color: #ff66b2;
+      background: transparent;
+    }
+
+    .btn.fill {
+      background: linear-gradient(90deg, #ff66b2, #00ffd5);
+      color: #000;
+    }
+
+    .code-block {
+      font-family: monospace;
+      white-space: pre-wrap;
+      color: #ffffff;
+    }
+
+    .skills-scroll-wrapper {
+      overflow-x: auto;
+    }
+
+    .skills-scroll {
+      display: flex;
+      gap: 20px;
+      padding: 20px 0;
+    }
+
+    .skill-card {
+      background: rgba(255, 255, 255, 0.08);
+      padding: 15px;
+      text-align: center;
+      border-radius: 10px;
+      flex: 0 0 auto;
+      width: 100px;
+    }
+
+    .skill-card img {
+      width: 40px;
+      height: 40px;
+    }
+
+    .skill-card p {
+      margin-top: 10px;
+      font-size: 14px;
+      color: #fff;
+    }
+.edu-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 50px;
+  background: linear-gradient(135deg, #0d1b2a, #1b263b);
+  padding: 60px 20px;
+}
+
+.float-img-container {
+  width: 300px;
+  animation: floatAnim 4s ease-in-out infinite;
+}
+
+.floating-image {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 255, 255, 0.15);
+}
+
+@keyframes floatAnim {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+.edu-details {
+  max-width: 500px;
+  background: #1e1f26;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0,255,213,0.2);
+  color: #ffffff;
+}
+
+.edu-details h3 {
+  color: #00ffd5;
+  font-size: 26px;
+  margin-bottom: 20px;
+}
+
+.edu-details p {
+  line-height: 1.8;
+  margin-bottom: 12px;
+}
+
+
+
+    .project-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+    }
+
+    .project-box {
+      background: rgba(255, 255, 255, 0.07);
+      padding: 20px;
+      border-radius: 12px;
+      color: #fff;
+    }
+
+    .project-box h4 {
+      color: #ffccff;
+    }
+
+    .project-box span {
+      display: inline-block;
+      margin: 5px 5px 0 0;
+      font-size: 12px;
+      padding: 3px 10px;
+      background: rgba(255,255,255,0.2);
+      border-radius: 20px;
+    }
+   .project-box {
+  padding: 20px;
+  border-radius: 15px;
+  color: #ffffff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(4px);
+}
+.project-box:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.08);
+}
+.project-box span {
+  display: inline-block;
+  margin: 5px 5px 0 0;
+  font-size: 12px;
+  padding: 3px 10px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 20px;
+}
+
+
+
+@keyframes borderGlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+    .contact-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      padding: 50px 20px;
+      background: rgba(255, 255, 255, 0.03);
+    }
+
+    .contact-card, .info-card {
+      background: rgba(0, 0, 0, 0.3);
+      padding: 25px;
+      border-radius: 12px;
+      width: 100%;
+      max-width: 400px;
+      color: #fff;
+    }
+
+    .contact-card input, .contact-card textarea {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      background: rgba(255, 255, 255, 0.1);
+      color: white;
+    }
+
+    .contact-card button {
+      padding: 10px 20px;
+      border: none;
+      background: #00ffd5;
+      color: black;
+      font-weight: bold;
+      border-radius: 25px;
+      cursor: pointer;
+    }
+
+    footer {
+  background: #111;
+  text-align: center;
+  padding: 25px 15px;
+  color: #aaa;
+  font-size: 14px;
+  line-height: 1.8;
+  border-top: 1px solid #333;
+}
+
+footer p {
+  margin: 10px 0;
+}
+
+.footer-link {
+  color: #00ffd5;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.footer-link i {
+  margin-right: 8px;
+  color: #ff66b2;
+  transition: transform 0.3s ease;
+}
+
+.footer-link:hover {
+  color: #ffffff;
+  text-shadow: 0 0 10px #00ffd5, 0 0 20px #00ffd5;
+}
+
+.footer-link:hover i {
+  transform: scale(1.2);
+  color: #ff99cc;
+  text-shadow: 0 0 8px #ff66b2;
+}
+
+
+    @media (max-width: 768px) {
+      .about {
+        flex-direction: column;
+      }
+      .edu-section {
+        flex-direction: column;
+        padding: 20px;
+      }
+      .skills-scroll {
+        justify-content: center;
+      }
+    }
+
+    .skills-scroll-wrapper {
+  overflow: hidden;
+  width: 100%;
+  padding-top: 20px;
+}
+
+.skills-scroll {
+  display: flex;
+  gap: 30px;
+  animation: scrollSkills 25s linear infinite;
+  align-items: center;
+}
+
+@keyframes scrollSkills {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.skill-card {
+  flex: 0 0 auto;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border-radius: 12px;
+  text-align: center;
+  width: 100px;
+  color: white;
+  transition: transform 0.3s;
+}
+.skill-card:hover {
+  transform: scale(1.1);
+}
+.skill-card img {
+  width: 40px;
+  height: 40px;
+}
+.skill-card p {
+  margin-top: 10px;
+  font-size: 14px;
+}
+.blended-img {
+  mix-blend-mode: screen;
+  filter: drop-shadow(0 0 20px #00ffd5);
+  opacity: 0.9;
+  transition: transform 0.4s ease;
+}
+
+.blended-img:hover {
+  transform: scale(1.05);
+}
+
+.glow-name {
+  background: linear-gradient(90deg, #00ffe7, #00b3ff, #38f9d7, #00ffe7);
+  background-size: 300% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  font-size: 34px;
+  font-weight: bold;
+  animation: shineName 4s ease-in-out infinite;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  text-shadow: 0 0 10px rgba(0, 255, 231, 0.5),
+               0 0 20px rgba(0, 179, 255, 0.4),
+               0 0 30px rgba(56, 249, 215, 0.3);
+}
+
+.glow-name:hover {
+  transform: scale(1.06);
+  text-shadow: 0 0 15px #00ffe7, 0 0 25px #00b3ff, 0 0 35px #38f9d7;
+}
+
+@keyframes shineName {
+  0% {
+    background-position: 0% center;
+  }
+  100% {
+    background-position: 100% center;
+  }
+}
+
+
+
+  </style>
+</head>
+<body>
+
+<header>
+  <h1><span class="glow-name">Shrisha S. Patil</span></h1>
+
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#education">Education</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <img src="ShrishaPhoto1.jpg" alt="Shrisha's Photo" />
+  <h2>Frontend Developer</h2>
+  <p>Hi! I'm Shrisha, a computer engineering student who loves building real-world projects using Java, MySQL, and React.</p>
+  <div class="social-icons">
+    <a href="https://github.com/Shrishapatil29"><i class="fab fa-github"></i></a>
+    <a href="https://www.linkedin.com/in/shrisha-patil-339782219?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fab fa-linkedin"></i></a>
+    <a href="mailto:shrishapatil29@gmail.com"><i class="fas fa-envelope"></i></a>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="about-left">
+    <h2>Hello,</h2>
+    <h1>This is <span class="highlight-pink">Shrisha S. Patil</span>,</h1>
+    <h1>I'm a <span class="highlight-blue">Frontend Developer</span>.</h1>
+    <a href="mailto:shrishapatil29@gmail.com" class="btn outline">CONTACT ME 👥</a>
+    <a href="ShrishaPatil_Resume.pdf" class="btn fill" download>GET RESUME ⬇</a>
+  </div>
+  <div class="about-right">
+    <pre class="code-block">
+const coder = {
+  name: 'Shrisha S. Patil',
+  skills: ['Java', 'React.js', 'MySQL', 'HTML', 'CSS', 'JavaScript'],
+  hardWorker: true,
+  quickLearner: true,
+  problemSolver: true,
+  logicalThinker: true,
+}
+    </pre>
+  </div>
+</section>
+
+<section id="skills">
+  <h3 style="text-align:center;">My Skills</h3>
+  <div class="skills-scroll-wrapper">
+    <div class="skills-scroll">
+      <div class="skill-card"><img src="https://cdn-icons-png.flaticon.com/512/732/732212.png"><p>HTML</p></div>
+      <div class="skill-card"><img src="https://cdn-icons-png.flaticon.com/512/732/732190.png"><p>CSS</p></div>
+      <div class="skill-card"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png"><p>JavaScript</p></div>
+      <div class="skill-card"><img src="https://cdn-icons-png.flaticon.com/512/226/226777.png"><p>Java</p></div>
+      <div class="skill-card"><img src="https://cdn-icons-png.flaticon.com/512/1126/1126012.png"><p>React</p></div>
+      <div class="skill-card"><img src="https://cdn-icons-png.flaticon.com/512/528/528260.png"><p>MySQL</p></div>
+      <div class="skill-card"><img src="https://cdn-icons-png.flaticon.com/512/1051/1051326.png"><p>Git</p></div>
+      
+  </div>
+</section>
+
+
+<section class="edu-section" id="education">
+  <div class="float-img-container">
+<img src="https://cdni.iconscout.com/illustration/premium/thumb/computer-on-desk-5691200-4745826.png" alt="3D Computer" class="floating-image" />
+  </div>
+  <div class="edu-details">
+    <h3>My Education Journey</h3>
+    <p><strong>B.E. in Computer Engineering</strong><br>D.Y.Patil Technical Campus, Talsande, Kolhapur.<br>2022 – 2025</p>
+    <p><strong>Diploma in Computer Engineering</strong><br>Government Polytechnic Mumbai<br>Passed: 2022</p>
+    <p><strong>SSC (10th)</strong><br>Shri Samarth Vidyalaya, Jogeshwari<br>Passed: 2019</p>
+  </div>
+</section>
+
+
+
+
+
+
+
+<section id="projects">
+  <h3 style="text-align:center;">My Projects</h3>
+  <div class="project-list">
+
+    <!-- Project 1 -->
+    <div class="project-box" style="background: linear-gradient(135deg, rgba(0,242,255,0.2), rgba(14,217,255,0.2)); box-shadow: 0 0 10px rgba(0, 255, 255, 0.15);">
+      <h4>Pharmacy Expiry Tracker</h4>
+      <p>Java + MySQL desktop app to manage expired medicines.</p>
+      <span>Java</span><span>MySQL</span><span>GUI</span><br>
+        <a href="https://github.com/Shrishapatil29/PROJECTS/tree/main/Pharmacy_Expiry_Tracker" style="display: inline-block; margin-top: 15px; color: #eae9eb; font-weight: bold;">🔗 View Code</a>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="project-box" style="background: linear-gradient(135deg, rgba(255,78,201,0.2), rgba(176,67,244,0.2)); box-shadow: 0 0 10px rgba(255, 0, 255, 0.15);">
+      <h4>PadosiMart</h4>
+      <p>E-commerce platform for local shopkeepers.</p>
+      <span>Java</span><span>Android SDK</span><span>MySQL</span><br>
+        <a href="https://github.com/Shrishapatil29/PadosiMart" style="display: inline-block; margin-top: 15px; color: #ded9e4; font-weight: bold;">🔗 View Code</a>
+    </div>
+
+    <!-- Project 3 -->
+    <div class="project-box" style="background: linear-gradient(135deg, rgba(168,255,120,0.2), rgba(120,255,214,0.2)); box-shadow: 0 0 10px rgba(0, 255, 128, 0.15);">
+      <h4>Image Filter App</h4>
+      <p>Online image filter web app using JS and CSS.</p>
+      <span>HTML</span><span>CSS</span><span>JavaScript</span><br>
+       <a href="https://github.com/Shrishapatil29/PROJECTS/tree/main/Image_filter" style="display: inline-block; margin-top: 15px; color: #f4eeed; font-weight: bold;">🔗 View Code</a>
+    </div>
+
+  </div>
+</section>
+
+
+</section>
+
+<section class="contact-container" id="contact">
+  <div class="contact-card">
+    <h3>Let’s Work Together!</h3>
+   <form action="https://formspree.io/f/xpwrnkdo" method="POST">
+  <input type="text" name="name" placeholder="Your Name" required />
+  <input type="email" name="email" placeholder="Your Email" required />
+  <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+  <button type="submit">Send Message</button>
+</form>
+
+
+  </div>
+  <div class="info-card">
+    <h3>Contact Info</h3>
+    <p><i class="fas fa-envelope"></i> shrishapatil29@gmail.com</p>
+    <p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/shrisha-patil-339782219?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" style="color: #f9f9fa;">LinkedIn</a></p>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2025 Shrisha S. Patil</p>
+  <p>
+    <a href="tel:+919876543210" class="footer-link">
+      <i class="fas fa-phone-alt"></i> +91 93244 11691
+    </a>
+  </p>
+  <p>
+    <a href="https://www.google.com/maps/place/Mumbai,+Maharashtra" target="_blank" class="footer-link">
+      <i class="fas fa-map-marker-alt"></i> Mumbai, Maharashtra, India
+    </a>
+  </p>
+</footer>
+
+
+</body>
+</html>
